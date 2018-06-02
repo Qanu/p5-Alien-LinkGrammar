@@ -2,11 +2,10 @@ use alienfile;
 
 plugin 'PkgConfig' => 'link-grammar';
 
+requires 'Alien::Build::Plugin::Gather::Dino';
 # https://www.abisource.com/projects/link-grammar/
 # https://github.com/opencog/link-grammar
 share {
-	requires 'Alien::gmake' => 0.14;
-
 	my $ext = 'tar.gz';
 	plugin Download => (
 		url => 'https://www.abisource.com/projects/link-grammar/',
