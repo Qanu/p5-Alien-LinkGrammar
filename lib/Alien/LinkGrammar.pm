@@ -5,7 +5,9 @@ use strict;
 use warnings;
 
 use base qw( Alien::Base );
+use Role::Tiny::With qw( with );
 
+with 'Alien::Role::Dino';
 
 1;
 __END__
