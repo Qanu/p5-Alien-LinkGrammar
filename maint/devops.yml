@@ -6,4 +6,12 @@ native:
     packages:
       - link-grammar
   msys2-mingw64:
-    packages: ~
+    packages:
+      # https://github.com/opencog/link-grammar/blob/master/mingw/README-MSYS2.md
+      - mingw-w64-x86_64-sqlite3
+      - mingw-w64-x86_64-libtre-git
+      - mingw-w64-x86_64-gettext
+      - mingw-w64-x86_64-hunspell
+      - mingw-w64-x86_64-hunspell-en
+      - libedit-devel
+      - zlib-devel
