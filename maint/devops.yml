@@ -1,0 +1,9 @@
+native:
+  debian:
+    packages:
+      - liblink-grammar-dev
+  macos-homebrew:
+    packages:
+      - link-grammar
+  msys2-mingw64:
+    packages: ~

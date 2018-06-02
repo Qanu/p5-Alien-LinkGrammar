@@ -1,0 +1,32 @@
+use alienfile;
+
+plugin 'PkgConfig' => 'link-grammar';
+
+# https://www.abisource.com/projects/link-grammar/
+# https://github.com/opencog/link-grammar
+share {
+	requires 'Alien::gmake' => 0.14;
+
+	my $ext = 'tar.gz';
+	plugin Download => (
+		url => 'https://www.abisource.com/projects/link-grammar/',
+		filter => qr/^link-grammar-.*\.\Q$ext\E$/,
+		version => qr/([0-9\.]+)/,
+	);
+
+	plugin Extract => $ext;
+	plugin 'Build::Autoconf' => ();
+
+	build [
+		[ '%{configure}'
+			. ' ' . join(' ',
+				qw(
+				--disable-python-bindings
+				--disable-java-bindings
+				)
+			)
+		],
+		[ '%{make}' ],
+		[ '%{make}', 'install' ],
+	];
+};
