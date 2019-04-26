@@ -8,6 +8,7 @@ native:
   msys2-mingw64:
     packages:
       # https://github.com/opencog/link-grammar/blob/master/mingw/README-MSYS2.md
+      - mingw-w64-x86_64-pkg-config
       - mingw-w64-x86_64-sqlite3
       - mingw-w64-x86_64-libtre-git
       - mingw-w64-x86_64-gettext

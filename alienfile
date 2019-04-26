@@ -16,6 +16,9 @@ share {
 	plugin Extract => $ext;
 	plugin 'Build::Autoconf' => ();
 
+	# Do not pass $ENV{PKG_CONFIG} into configure
+	delete meta_prop->{env}->{PKG_CONFIG};
+
 	build [
 		[ '%{configure}'
 			. ' ' . join(' ',
