@@ -21,6 +21,6 @@ L<Link Grammar Parser homepage|http://www.abisource.com/projects/link-grammar/>
 
 L<Link Grammar Parser repository|https://github.com/opencog/link-grammar>
 
-L<Repository information|http://project-renard.github.io/doc/development/repo/p5-Alien-LinkGrammar/>
+
 
 =cut
